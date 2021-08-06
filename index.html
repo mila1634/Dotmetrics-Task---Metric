@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="simple-report">
+                <div class="reports-steps">
+                    <!-- <div class="step">
+                        <div class="step-top">
+                            <div class="text">1</div>
+                            <div class="media">
+                                <img src="images/elipse-1-stroke.svg" class="elipse">
+                                <img src="images/Vector.svg" class="vector">
+                                <img src="images/Vector-stroke.svg" class="vector-stroke">
+                            </div>
+                        </div>
+                        <div>
+                            Period
+                        </div>
+                    </div> -->
+                    <div class="step">
+                        <img src="images/step-1.svg">
+                        Period
+                    </div>
+                    <div class="step">
+                        <img src="images/step-2.svg">
+                        Media
+                    </div>
+                    <div class="step">
+                        <img src="images/step-3.svg">
+                        Target
+                    </div>
+                    <div class="step active">
+                        <img src="images/step-4.svg">
+                        Metrics
+                    </div>
+                    <div class="step">
+                        <img src="images/step-5.svg">
+                        Summary
+                    </div> 
+                </div>
+            </div>
+            <div class="modal-tabs">
+                <div class="navigation">
+                    <ul>
+                        <li>Standard</li>
+                        <li class="active">All metric types</li>
+                        <li>My metric</li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <img src="images/search.svg">
+                </div>
+            </div>
+
+            <div class="options-filters">
+                <div class="filters">
+                    <img src="images/Filters.svg">
+                </div>
+                <div class="options">
+                    <div class="sort-asending">
+                        <img src="images/sort-ascending.svg">
+                    </div>
+                    <div class="expand-all">
+                        <img src="images/expand-all.svg">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="content">
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn1" class="btn" onclick="hideOrShow('selected-item1');changeBtn('btn1')"></button>
+                        <span>Devices</span>
+                    </div>
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn2" class="btn" onclick="hideOrShow('selected-item2');changeBtn('btn2')"></button>
+                        <span>Unique users</span>
+                    </div>
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn3" class="btn" onclick="hideOrShow('selected-item3');changeBtn('btn3')"></button>
+                        <span>Visits</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites"> 
+                        <button id="btn4" class="btn" onclick="hideOrShow('selected-item4');changeBtn('btn4')"></button>
+                        <span>Exclusive users</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn5" class="btn" onclick="hideOrShow('selected-item5');changeBtn('btn5')"></button>
+                        <span>Exclusive users (relative)</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn6" class="btn" onclick="hideOrShow('selected-item6');changeBtn('btn6')"></button>
+                        <span>Average page views per unique user</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn7" class="btn" onclick="hideOrShow('selected-item7');changeBtn('btn7')"></button>
+                        <span>Average visits per unique user</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn8" class="btn" onclick="hideOrShow('selected-item8');changeBtn('btn8')"></button>
+                        <span>Average daily page views</span>
+                    </div> 
+                    <div class="content-item" data-tooltip="Number of unique users who visited only individual websites among all selected websites">
+                        <button id="btn9" class="btn" onclick="hideOrShow('selected-item9');changeBtn('btn9')"></button>
+                        <span>Audience share</span>
+                    </div> 
+                </div>
+                <div class="selected">
+                    <div class="selected-metrics">
+                        <h1>Selected metrics</h1>
+                        <img src="images/More.svg">
+                    </div>
+
+                    <div class="selected-list" id="selected-list">
+                        <div id="selected-item1" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Devices</span>
+                        </div>
+                        <div id="selected-item2" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Unique users</span>
+                        </div>
+                        <div id="selected-item3" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Visits</span>
+                        </div>
+                        <div id="selected-item4" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Exclusive users</span>
+                        </div>
+                        <div id="selected-item5" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Exclusive users (relative)</span>
+                        </div>
+                        <div id="selected-item6" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Average page views per unique users</span>
+                        </div>
+                        <div id="selected-item7" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Average visits per unique user</span>
+                        </div>
+                        <div id="selected-item8" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Average daily page views</span>
+                        </div>
+                        <div id="selected-item9" class="selected-item">
+                            <img src="images/Drag.svg">
+                            <span>Audience share</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
